@@ -1,0 +1,15 @@
+.word-list {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 256px;
+    width: 100%;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 32px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #FEFAC4;
+        text-align: center;
+    }
+}
