@@ -5,7 +5,7 @@ import menu from '../../menu.png';
 const Header = () => {
     return (
         <div className='header'>
-          <img src={menu}/>
+          <img src={menu} alt='menu button'/>
         </div>
     )
 }

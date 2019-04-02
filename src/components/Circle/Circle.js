@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Circle.scss';
 
-class circle extends Component {
+class Circle extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,22 +14,27 @@ componentDidMount(){
 }
 
 createInputs = (qty) => {
-    // array with index for each input desired
-    const inputs = Array.from(Array(5)).forEach( (e,i) => e = (i + 1))
-    console.log(inputs)
+    // create array with number of desired indexes with undefined values
+    const inputs = Array.from(new Array(qty))
+    // set values for indexes to be 1 to qty
+    inputs.forEach( (e,i, arr) => arr[i] = (i + 1))
+    this.setState({
+        inputs
+    })
 }
 
     render() {
+        const { inputs } = this.state
+        const renderedInputs = inputs.map( e => {
+            return <input className='letter' data-order={e}/>
+        })
         return (
             <div className='circle'>
-                <input className='letter'/>
-                <input className='letter'/>
-                <input className='letter'/>
-                <input className='letter'/>
-                <input className='letter'/>
+                
+
             </div>
         );
     }
 }
 
-export default circle;
+export default Circle;
